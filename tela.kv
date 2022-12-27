@@ -1,0 +1,28 @@
+<Comp>:
+    BoxLayout:
+        FloatLayout:
+            Label:
+                text: " Dr. Andre (d1)     Dr. Edgar (d3)    Dr. Adriano (d2)" 
+                pos_hint: {'x': .2, 'y': .8} 
+                size_hint: .6, .2 
+                font_size: '25sp'
+                markup: True
+            TextInput:
+                id:valor        
+                pos_hint:{"center_x": 0.8, "center_y": 0.5}
+                size_hint_x: 0.11                             
+                size_hint_y: 0.07
+            Button:
+                text: "Próximo a atender"
+                font_size: '20sp'
+                markup: True
+                on_press: 
+                size_hint_y: None
+                height: '48dp'
+                on_press: root.mostrar_resultado()
+                on_release: root.save_result()
+            Label:
+                text:'Ultimo dentista que realizou atendimento'
+                font_size: '20sp'
+            	id: resultado
+        	

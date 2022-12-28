@@ -12,17 +12,25 @@
                 pos_hint:{"center_x": 0.8, "center_y": 0.5}
                 size_hint_x: 0.11                             
                 size_hint_y: 0.07
+            TextInput:
+                id:ultimo       
+                pos_hint:{"center_x": 0.8, "center_y": 0.7}
+                size_hint_x: 0.11                             
+                size_hint_y: 0.07
             Button:
                 text: "Próximo a atender"
                 font_size: '20sp'
                 markup: True
-                on_press: 
                 size_hint_y: None
                 height: '48dp'
                 on_press: root.mostrar_resultado()
                 on_release: root.save_result()
             Label:
-                text:'Ultimo dentista que realizou atendimento'
+                text:'Próximo agendamento será ao dentista'
                 font_size: '20sp'
-            	id: resultado
-        	
+            Label:
+                text:'Último agendamento foi para o dentista'
+                font_size: '20sp'
+                pos_hint: {'x': .2, 'y': 0.6} 
+                size_hint: .6, .2 
+        	    markup: True

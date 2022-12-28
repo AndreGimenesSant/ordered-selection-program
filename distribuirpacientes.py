@@ -15,6 +15,8 @@ class Comp(BoxLayout):
         super().__init__()
         self.result = None
         self.load_result()
+        ultimo = json.dumps(self.result)
+        self.ids.ultimo.text = ultimo
     def mostrar_resultado(self):
         dr_Andre = "d1"
         dr_Adriano = "d2"
